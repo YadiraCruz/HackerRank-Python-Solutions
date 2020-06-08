@@ -1,0 +1,33 @@
+#Count the number of prime numbers than less than a non-negative number n and return the result
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'CountPrimes' function below.
+#
+# This function will count the number of prime 
+# values that occur that are less then n and return
+# the result. 
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER n as parameter.
+#
+
+def CountPrimes(n):
+    count_of_prime = 0
+    for current_number in range(2,n):
+        if isPrime(current_number):
+            count_of_prime += 1
+    return count_of_prime
+    
+def isPrime(n):
+    for current_number in range(2,n):
+        if n % current_number == 0:
+            return False
+    return True
